@@ -4,6 +4,11 @@ function sortear() {
     var de = parseInt(document.getElementById("de").value);
     var ate = parseInt(document.getElementById("ate").value);
 
+    if (quantidade > (ate - de + 1)) {
+        alert('Campo "Do número" deve ser inferior ao campo "Até o número". Verifique!');
+        return;
+    }
+
     let sorteados = [];
     let numero;
     for (let i = 0; i < quantidade; i++) {
